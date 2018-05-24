@@ -22,7 +22,7 @@ class RentCasesViewController: UIViewController, UITableViewDataSource, UITableV
   
   @IBOutlet weak var signUpBtn: UIButton!
   @IBAction func signUp(_ sender: UIButton) {
-    self.performSegue(withIdentifier: "goCreateAccountVC", sender: nil)
+    //self.performSegue(withIdentifier: "goCreateAccountVC", sender: nil)
   }
   
   

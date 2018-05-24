@@ -106,7 +106,7 @@ class CreateAccountViewController: UIViewController {
   
   @IBAction func logIn(_ sender: UIButton) {
     //self.dismiss(animated: true, completion: nil)
-    self.performSegue(withIdentifier: "goToLogIn", sender: self)
+    //self.performSegue(withIdentifier: "goToLogIn", sender: self)
   }
   
 }
