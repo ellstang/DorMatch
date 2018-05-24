@@ -1,0 +1,523 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D0A168B207E027B00B9A970 /* SingleHouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A168A207E027A00B9A970 /* SingleHouseViewController.swift */; };
+		4D163984207EFAD100CE1A33 /* SingletonForUploadImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D163983207EFAD100CE1A33 /* SingletonForUploadImageViewController.swift */; };
+		4D284C7C20772CCB00A04C1C /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D284C7B20772CCB00A04C1C /* Users.swift */; };
+		4D4F397A20624DB5004A7891 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4F397920624DB5004A7891 /* AppDelegate.swift */; };
+		4D4F397F20624DB5004A7891 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D4F397D20624DB5004A7891 /* Main.storyboard */; };
+		4D4F398220624DB5004A7891 /* UploadPhotoAPP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D4F398020624DB5004A7891 /* UploadPhotoAPP.xcdatamodeld */; };
+		4D4F398420624DB5004A7891 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D4F398320624DB5004A7891 /* Assets.xcassets */; };
+		4D4F398720624DB5004A7891 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D4F398520624DB5004A7891 /* LaunchScreen.storyboard */; };
+		4D4F398F20625042004A7891 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D4F398E20625042004A7891 /* GoogleService-Info.plist */; };
+		4D4F399120625C0D004A7891 /* UploadFinishPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4F399020625C0D004A7891 /* UploadFinishPageViewController.swift */; };
+		4D5CD6A42096D13F0059CE57 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5CD6A32096D13F0059CE57 /* MessageModel.swift */; };
+		4D65D206207876610050FA1A /* RentHouseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D65D204207876610050FA1A /* RentHouseCell.swift */; };
+		4D99FF3F2090684D00A4AA64 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D99FF3E2090684D00A4AA64 /* GradientView.swift */; };
+		4DA05E5A2091A19000D99098 /* ChannelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA05E592091A19000D99098 /* ChannelsViewController.swift */; };
+		4DA05E5C2091A62400D99098 /* MyChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA05E5B2091A62400D99098 /* MyChannelCell.swift */; };
+		4DA05E602091A6D900D99098 /* MyMsgCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA05E5F2091A6D900D99098 /* MyMsgCell.swift */; };
+		4DA05E622091AA2600D99098 /* SendMsgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA05E612091AA2600D99098 /* SendMsgViewController.swift */; };
+		4DA05E642091AA7500D99098 /* OthersMsgCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA05E632091AA7500D99098 /* OthersMsgCell.swift */; };
+		4DB8BD2C207C94C700A1FC8E /* RentHouseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DB8BD2A207C94C700A1FC8E /* RentHouseCell.xib */; };
+		4DDA55A62079F42C00FC8C09 /* UploadImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDA55A52079F42C00FC8C09 /* UploadImageViewController.swift */; };
+		4DDA55A8207A068B00FC8C09 /* fetchImageUrlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDA55A7207A068B00FC8C09 /* fetchImageUrlProtocol.swift */; };
+		4DE3A0C72075D33700CAE50C /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE3A0C62075D33700CAE50C /* LogInViewController.swift */; };
+		4DE3A0CB2075F59900CAE50C /* RentCasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE3A0CA2075F59900CAE50C /* RentCasesViewController.swift */; };
+		4DE3A0CD2075F5FE00CAE50C /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE3A0CC2075F5FE00CAE50C /* RootViewController.swift */; };
+		4DE783CF2063489C00241160 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE783CE2063489C00241160 /* PostModel.swift */; };
+		4DEED8142068CF96000F52E4 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEED8132068CF96000F52E4 /* CreateAccountViewController.swift */; };
+		4F00EBA1B59E52000310EBF5 /* Pods_UploadPhotoAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A76AE45673E97D4A0EA873 /* Pods_UploadPhotoAPP.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		08A76AE45673E97D4A0EA873 /* Pods_UploadPhotoAPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UploadPhotoAPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D0A168A207E027A00B9A970 /* SingleHouseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleHouseViewController.swift; sourceTree = "<group>"; };
+		4D163983207EFAD100CE1A33 /* SingletonForUploadImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonForUploadImageViewController.swift; sourceTree = "<group>"; };
+		4D284C7B20772CCB00A04C1C /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		4D4F397620624DB5004A7891 /* UploadPhotoAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UploadPhotoAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D4F397920624DB5004A7891 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4D4F397E20624DB5004A7891 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4D4F398120624DB5004A7891 /* UploadPhotoAPP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UploadPhotoAPP.xcdatamodel; sourceTree = "<group>"; };
+		4D4F398320624DB5004A7891 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4D4F398620624DB5004A7891 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4D4F398820624DB5004A7891 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D4F398E20625042004A7891 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4D4F399020625C0D004A7891 /* UploadFinishPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadFinishPageViewController.swift; sourceTree = "<group>"; };
+		4D5CD6A32096D13F0059CE57 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		4D65D204207876610050FA1A /* RentHouseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentHouseCell.swift; sourceTree = "<group>"; };
+		4D99FF3E2090684D00A4AA64 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		4DA05E592091A19000D99098 /* ChannelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsViewController.swift; sourceTree = "<group>"; };
+		4DA05E5B2091A62400D99098 /* MyChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChannelCell.swift; sourceTree = "<group>"; };
+		4DA05E5F2091A6D900D99098 /* MyMsgCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMsgCell.swift; sourceTree = "<group>"; };
+		4DA05E612091AA2600D99098 /* SendMsgViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMsgViewController.swift; sourceTree = "<group>"; };
+		4DA05E632091AA7500D99098 /* OthersMsgCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersMsgCell.swift; sourceTree = "<group>"; };
+		4DB8BD2A207C94C700A1FC8E /* RentHouseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RentHouseCell.xib; sourceTree = "<group>"; };
+		4DDA55A52079F42C00FC8C09 /* UploadImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageViewController.swift; sourceTree = "<group>"; };
+		4DDA55A7207A068B00FC8C09 /* fetchImageUrlProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fetchImageUrlProtocol.swift; sourceTree = "<group>"; };
+		4DE3A0C62075D33700CAE50C /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		4DE3A0CA2075F59900CAE50C /* RentCasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentCasesViewController.swift; sourceTree = "<group>"; };
+		4DE3A0CC2075F5FE00CAE50C /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		4DE783CE2063489C00241160 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		4DEED8132068CF96000F52E4 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		50E0BB52C0AD9B75C5976072 /* Pods-UploadPhotoAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UploadPhotoAPP.release.xcconfig"; path = "Pods/Target Support Files/Pods-UploadPhotoAPP/Pods-UploadPhotoAPP.release.xcconfig"; sourceTree = "<group>"; };
+		52E8EF9586BA613F17A24FE3 /* Pods-UploadPhotoAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UploadPhotoAPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UploadPhotoAPP/Pods-UploadPhotoAPP.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D4F397320624DB5004A7891 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F00EBA1B59E52000310EBF5 /* Pods_UploadPhotoAPP.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D4F396D20624DB5004A7891 = {
+			isa = PBXGroup;
+			children = (
+				4D4F397820624DB5004A7891 /* UploadPhotoAPP */,
+				4D4F397720624DB5004A7891 /* Products */,
+				8C219C237C25980F63C35014 /* Pods */,
+				A24B684AC1AC05831B769576 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4D4F397720624DB5004A7891 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D4F397620624DB5004A7891 /* UploadPhotoAPP.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D4F397820624DB5004A7891 /* UploadPhotoAPP */ = {
+			isa = PBXGroup;
+			children = (
+				4DE783CD2063486F00241160 /* Model */,
+				4DE783CC2063486800241160 /* View */,
+				4D4F397D20624DB5004A7891 /* Main.storyboard */,
+				4DE783CB2063485600241160 /* ViewController */,
+				4D4F398320624DB5004A7891 /* Assets.xcassets */,
+				4D4F398520624DB5004A7891 /* LaunchScreen.storyboard */,
+				4D4F398820624DB5004A7891 /* Info.plist */,
+				4D4F398020624DB5004A7891 /* UploadPhotoAPP.xcdatamodeld */,
+				4D4F398E20625042004A7891 /* GoogleService-Info.plist */,
+			);
+			path = UploadPhotoAPP;
+			sourceTree = "<group>";
+		};
+		4DE783CB2063485600241160 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4DB8BD2A207C94C700A1FC8E /* RentHouseCell.xib */,
+				4DE3A0CC2075F5FE00CAE50C /* RootViewController.swift */,
+				4DE3A0CA2075F59900CAE50C /* RentCasesViewController.swift */,
+				4DEED8132068CF96000F52E4 /* CreateAccountViewController.swift */,
+				4DE3A0C62075D33700CAE50C /* LogInViewController.swift */,
+				4D65D204207876610050FA1A /* RentHouseCell.swift */,
+				4DDA55A52079F42C00FC8C09 /* UploadImageViewController.swift */,
+				4D4F399020625C0D004A7891 /* UploadFinishPageViewController.swift */,
+				4D0A168A207E027A00B9A970 /* SingleHouseViewController.swift */,
+				4D99FF3E2090684D00A4AA64 /* GradientView.swift */,
+				4DA05E592091A19000D99098 /* ChannelsViewController.swift */,
+				4DA05E5B2091A62400D99098 /* MyChannelCell.swift */,
+				4DA05E612091AA2600D99098 /* SendMsgViewController.swift */,
+				4DA05E5F2091A6D900D99098 /* MyMsgCell.swift */,
+				4DA05E632091AA7500D99098 /* OthersMsgCell.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4DE783CC2063486800241160 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4DE783CD2063486F00241160 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4D4F397920624DB5004A7891 /* AppDelegate.swift */,
+				4DE783CE2063489C00241160 /* PostModel.swift */,
+				4D284C7B20772CCB00A04C1C /* Users.swift */,
+				4DDA55A7207A068B00FC8C09 /* fetchImageUrlProtocol.swift */,
+				4D163983207EFAD100CE1A33 /* SingletonForUploadImageViewController.swift */,
+				4D5CD6A32096D13F0059CE57 /* MessageModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8C219C237C25980F63C35014 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52E8EF9586BA613F17A24FE3 /* Pods-UploadPhotoAPP.debug.xcconfig */,
+				50E0BB52C0AD9B75C5976072 /* Pods-UploadPhotoAPP.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A24B684AC1AC05831B769576 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08A76AE45673E97D4A0EA873 /* Pods_UploadPhotoAPP.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4D4F397520624DB5004A7891 /* UploadPhotoAPP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D4F398B20624DB5004A7891 /* Build configuration list for PBXNativeTarget "UploadPhotoAPP" */;
+			buildPhases = (
+				2E1302E8100ABAE46D5BB2A6 /* [CP] Check Pods Manifest.lock */,
+				4D4F397220624DB5004A7891 /* Sources */,
+				4D4F397320624DB5004A7891 /* Frameworks */,
+				4D4F397420624DB5004A7891 /* Resources */,
+				0AFC3AF16D3700B3BAC88B8A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UploadPhotoAPP;
+			productName = UploadPhotoAPP;
+			productReference = 4D4F397620624DB5004A7891 /* UploadPhotoAPP.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4D4F396E20624DB5004A7891 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "唐嘉伶";
+				TargetAttributes = {
+					4D4F397520624DB5004A7891 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4D4F397120624DB5004A7891 /* Build configuration list for PBXProject "UploadPhotoAPP" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4D4F396D20624DB5004A7891;
+			productRefGroup = 4D4F397720624DB5004A7891 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4D4F397520624DB5004A7891 /* UploadPhotoAPP */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D4F397420624DB5004A7891 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D4F398720624DB5004A7891 /* LaunchScreen.storyboard in Resources */,
+				4D4F398420624DB5004A7891 /* Assets.xcassets in Resources */,
+				4D4F397F20624DB5004A7891 /* Main.storyboard in Resources */,
+				4D4F398F20625042004A7891 /* GoogleService-Info.plist in Resources */,
+				4DB8BD2C207C94C700A1FC8E /* RentHouseCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0AFC3AF16D3700B3BAC88B8A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-UploadPhotoAPP/Pods-UploadPhotoAPP-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UploadPhotoAPP/Pods-UploadPhotoAPP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E1302E8100ABAE46D5BB2A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UploadPhotoAPP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D4F397220624DB5004A7891 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D0A168B207E027B00B9A970 /* SingleHouseViewController.swift in Sources */,
+				4DDA55A8207A068B00FC8C09 /* fetchImageUrlProtocol.swift in Sources */,
+				4DA05E5A2091A19000D99098 /* ChannelsViewController.swift in Sources */,
+				4D99FF3F2090684D00A4AA64 /* GradientView.swift in Sources */,
+				4DEED8142068CF96000F52E4 /* CreateAccountViewController.swift in Sources */,
+				4DA05E5C2091A62400D99098 /* MyChannelCell.swift in Sources */,
+				4DA05E642091AA7500D99098 /* OthersMsgCell.swift in Sources */,
+				4DA05E622091AA2600D99098 /* SendMsgViewController.swift in Sources */,
+				4DA05E602091A6D900D99098 /* MyMsgCell.swift in Sources */,
+				4DDA55A62079F42C00FC8C09 /* UploadImageViewController.swift in Sources */,
+				4DE3A0CD2075F5FE00CAE50C /* RootViewController.swift in Sources */,
+				4D163984207EFAD100CE1A33 /* SingletonForUploadImageViewController.swift in Sources */,
+				4DE783CF2063489C00241160 /* PostModel.swift in Sources */,
+				4DE3A0C72075D33700CAE50C /* LogInViewController.swift in Sources */,
+				4D4F398220624DB5004A7891 /* UploadPhotoAPP.xcdatamodeld in Sources */,
+				4D4F399120625C0D004A7891 /* UploadFinishPageViewController.swift in Sources */,
+				4D5CD6A42096D13F0059CE57 /* MessageModel.swift in Sources */,
+				4D4F397A20624DB5004A7891 /* AppDelegate.swift in Sources */,
+				4DE3A0CB2075F59900CAE50C /* RentCasesViewController.swift in Sources */,
+				4D284C7C20772CCB00A04C1C /* Users.swift in Sources */,
+				4D65D206207876610050FA1A /* RentHouseCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4D4F397D20624DB5004A7891 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D4F397E20624DB5004A7891 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4D4F398520624DB5004A7891 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D4F398620624DB5004A7891 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4D4F398920624DB5004A7891 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4D4F398A20624DB5004A7891 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4D4F398C20624DB5004A7891 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52E8EF9586BA613F17A24FE3 /* Pods-UploadPhotoAPP.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M656G7437U;
+				INFOPLIST_FILE = UploadPhotoAPP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = UploadPhotoAPP.UploadPhotoAPP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		4D4F398D20624DB5004A7891 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50E0BB52C0AD9B75C5976072 /* Pods-UploadPhotoAPP.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M656G7437U;
+				INFOPLIST_FILE = UploadPhotoAPP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = UploadPhotoAPP.UploadPhotoAPP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4D4F397120624DB5004A7891 /* Build configuration list for PBXProject "UploadPhotoAPP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D4F398920624DB5004A7891 /* Debug */,
+				4D4F398A20624DB5004A7891 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D4F398B20624DB5004A7891 /* Build configuration list for PBXNativeTarget "UploadPhotoAPP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D4F398C20624DB5004A7891 /* Debug */,
+				4D4F398D20624DB5004A7891 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4D4F398020624DB5004A7891 /* UploadPhotoAPP.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4D4F398120624DB5004A7891 /* UploadPhotoAPP.xcdatamodel */,
+			);
+			currentVersion = 4D4F398120624DB5004A7891 /* UploadPhotoAPP.xcdatamodel */;
+			path = UploadPhotoAPP.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4D4F396E20624DB5004A7891 /* Project object */;
+}
