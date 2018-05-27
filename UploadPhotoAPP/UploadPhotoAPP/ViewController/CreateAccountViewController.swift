@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class CreateAccountViewController: UIViewController, UITextFieldDelegate {
+class CreateAccountViewController: UIViewController {
   
   var handle: Bool = false
   
@@ -97,9 +97,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
             let alert = UIAlertController(title: "Rock", message: "Successed! Your account has been created", preferredStyle: .alert)
             let alertMsg = UIAlertAction(title: "Perfect", style: .cancel, handler: nil)
             alert.addAction(alertMsg)
-          self.present(alert, animated: true, completion: {
-            self.dismiss(animated: true, completion: nil)
-          })
+            self.present(alert, animated: true, completion: nil)
           self.goToUploadBtn.isEnabled = true
         })
       }
@@ -108,19 +106,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
   
   @IBAction func logIn(_ sender: UIButton) {
     //self.dismiss(animated: true, completion: nil)
-    self.performSegue(withIdentifier: "goToLogIn", sender: nil)
-  }
-  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    enterUserNameTextFd.resignFirstResponder()
-    enterPsdTextFd.resignFirstResponder()
-    enterEmailTextFd.resignFirstResponder()
-    confirmPsdTextFd.resignFirstResponder()
-    
-    return true
-  }
-  
-  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    self.view.endEditing(true)
+    self.performSegue(withIdentifier: "goToLogIn", sender: self)
   }
   
 }

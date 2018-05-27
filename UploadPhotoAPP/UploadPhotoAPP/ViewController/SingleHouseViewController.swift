@@ -9,8 +9,9 @@ import Firebase
 
 class SingleHouseViewController: UIViewController {
   
-  var delegate: GetSelectedCellInfoProtocol?
 
+  var post = Post_ForTableView()
+  
   @IBOutlet weak var mainImage: UIImageView!
   @IBOutlet weak var postTitleLabel: UILabel!
   @IBOutlet weak var postDate: UILabel!
@@ -18,8 +19,10 @@ class SingleHouseViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    let imageURL =  URL(string: (delegate?.getCellInfo().imageURL)!)
+    let imageURL = URL(string: post.imageURL!)
+    postTitleLabel.text = post.postTitle!
+    longDescription.text = post.imageLongDescription
+
     URLSession.shared.dataTask(with: imageURL!) { (data, response, error) in
       if error != nil {
         print("download image task error \(error)")
@@ -29,21 +32,12 @@ class SingleHouseViewController: UIViewController {
         }
       }
     }.resume()
-    
-    postTitleLabel.text = delegate?.getCellInfo().postTitle
-    longDescription.text = delegate?.getCellInfo().imageLongDescription
-    print(delegate?.getCellInfo().imageLongDescription)
-    //print(delegate?.getCellInfo().postTitle ?? "Failed to fetch post info")
+
   }
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }
-  @IBAction func goBack(_ sender: UIButton) {
-    self.dismiss(animated: true, completion: nil)
-//   performSegue(withIdentifier: "BackToRentCasesVC", sender: nil)
-  }
-  
   @IBAction func goChatWithPostUser(_ sender: UIButton) {
     self.performSegue(withIdentifier: "goSendMsgVC", sender: nil)
   }

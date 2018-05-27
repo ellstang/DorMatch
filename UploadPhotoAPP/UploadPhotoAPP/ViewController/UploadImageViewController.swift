@@ -14,6 +14,9 @@ class UploadImageViewController: UIViewController, UITextFieldDelegate {
   @IBOutlet weak var goNextStepBtn: UIButton!
   @IBOutlet weak var nameForImageTextFd: UITextField!
   
+  @IBAction func goUploadImageVC(_ sender: Any) {
+    self.performSegue(withIdentifier: "goToUploadImageVC", sender: nil)
+  }
   
   let pickerVC = UIImagePickerController()
   let storage: StorageReference! = Storage.storage().reference().child("PostImages")
@@ -23,6 +26,7 @@ class UploadImageViewController: UIViewController, UITextFieldDelegate {
     super.viewDidLoad()
     self.navigationItem.rightBarButtonItem?.isEnabled = false
     checkIfTheresImageAndNameOfImage()
+    nameForImageTextFd.delegate = self
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -31,10 +35,6 @@ class UploadImageViewController: UIViewController, UITextFieldDelegate {
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
-  }
-  
-  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    self.view.endEditing(true)
   }
   
   @IBAction func pickImage(_ sender: Any) {
@@ -114,6 +114,9 @@ extension UploadImageViewController: UIImagePickerControllerDelegate, UINavigati
     }
   }
   
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    self.view.resignFirstResponder()
+  }
 }
 
 

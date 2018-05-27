@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class LogInViewController: UIViewController, UITextFieldDelegate {
+class LogInViewController: UIViewController {
 
   @IBOutlet weak var emailTextFd: UITextField!
   @IBOutlet weak var psdTextFd: UITextField!
@@ -38,9 +38,6 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     return rentCaseVC
   }
   
-  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    self.view.endEditing(true)
-  }
     
   @IBAction func logIn(_ sender: UIButton) {
     let databaseRef = Database.database().reference(fromURL: "https://uploadphoto-7af69.firebaseio.com/")
@@ -56,7 +53,9 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         self.present(alert, animated: true, completion: nil)
         self.dismiss(animated: true, completion: nil)
 //        self.present(alert, animated: true, completion: {
-
+//
+          //self.present(self.rentCaseVC, animated: true, completion: nil)
+//        })
       }
     }
   }

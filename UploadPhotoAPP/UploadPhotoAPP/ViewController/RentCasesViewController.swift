@@ -7,22 +7,23 @@
 import UIKit
 import Firebase
 
-class RentCasesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, GetSelectedCellInfoProtocol {
-  
+class RentCasesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
   let databaseRef: DatabaseReference = Database.database().reference(fromURL: "https://uploadphoto-7af69.firebaseio.com")
-  var singleHouseViewController = SingleHouseViewController()
+
+  // MARK: - here is an int whill be passed in the indexPath of cell on tableView got selected
+  var selectedCellIndexPath = Int()
   
   @IBOutlet weak var logOutBtn: UIButton!
   @IBOutlet weak var rentCasesTableView: UITableView!
   @IBOutlet weak var postBtn: UIBarButtonItem!
-  
   @IBAction func Post(_ sender: UIBarButtonItem) {
     self.performSegue(withIdentifier: "goToUploadImageVC", sender: nil)
   }
   
   @IBOutlet weak var signUpBtn: UIButton!
   @IBAction func signUp(_ sender: UIButton) {
-    
+//    self.performSegue(withIdentifier: "goCreateAccountVC", sender: nil)
   }
   
   
@@ -30,7 +31,6 @@ class RentCasesViewController: UIViewController, UITableViewDataSource, UITableV
     super.viewDidLoad()
     rentCasesTableView.delegate = self
     rentCasesTableView.dataSource = self
-    
     rentCasesTableView.rowHeight = UITableViewAutomaticDimension
     
     //register RentHouseCell
@@ -43,10 +43,9 @@ class RentCasesViewController: UIViewController, UITableViewDataSource, UITableV
       fetchAllExistingPostsFromDB()
     }
     // for GetSelectedCellInfoProtocol:
-    let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-    singleHouseViewController = mainStoryboard.instantiateViewController(withIdentifier: "SingelHouseVC") as! SingleHouseViewController
-    singleHouseViewController.delegate = self
-    //print(displayPost.count)
+//    let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//    singleHouseViewController = mainStoryboard.instantiateViewController(withIdentifier: "SingelHouseVC") as! SingleHouseViewController
+//    singleHouseViewController.delegate = self
   }
   
   override func didReceiveMemoryWarning() {
@@ -56,7 +55,6 @@ class RentCasesViewController: UIViewController, UITableViewDataSource, UITableV
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     checkIfLoggedIn()
-    print(displayPost.count)
   }
   
   @IBAction func logOut(_ sender: UIButton) {
@@ -182,39 +180,15 @@ class RentCasesViewController: UIViewController, UITableViewDataSource, UITableV
 //    }, withCancel: nil)
 //    databaseRef.child("Posts").queryLimited(toLast: 10).keepSynced(true)
   }
-  
-  func fetchAllExistingPostsFromDBWhenViewWillAppear() {
-    databaseRef.child("Posts").observe(.childAdded) { (snapshot) in
-      let PostDict = snapshot.value as! Dictionary<String, AnyObject>
-      //print(PostDict)
-      let thisImageURL = PostDict["imageURL"]
-      let thisPosterDescription = PostDict["posterDescription"]
-      let thisPostTitle = PostDict["postTitle"]
-      
-      //create instance of class "Post_ForTableView" to store this snapshot and for append it to our displayPost array later
-      let downloadedPost = Post_ForTableView()
-      downloadedPost.imageURL = thisImageURL as! String
-      downloadedPost.postTitle = thisPostTitle as! String
-      downloadedPost.posterDescription = thisPosterDescription as! String
-      
-      self.rentCasesTableView.reloadData()
-    }
-  }
+
   
   // MARK: - tableView delegate metohds
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    selectedCellIndexPath = indexPath.row
     
-    selectedCellHouseInfoData.imageURL = displayPost[indexPath.row].imageURL
-    selectedCellHouseInfoData.posterDescription = displayPost[indexPath.row].posterDescription
-    selectedCellHouseInfoData.postTitle = displayPost[indexPath.row].postTitle
-    selectedCellHouseInfoData.imageLongDescription = displayPost[indexPath.row].imageLongDescription
-    
-    //performSegue(withIdentifier: "BackToRentCasesVC", sender: nil)
-    //now we got the info for that house, let go to that singleHouseViewController
-    present(singleHouseViewController, animated: true, completion: nil)
+    performSegue(withIdentifier: "BackToRentCasesVC", sender: nil)
   }
   
-  // protocol GetSelectedCellInfoProtocol declared here:
   func getCellInfo() -> Post_Original {
     let returnPost = selectedCellHouseInfoData
     return returnPost
@@ -227,6 +201,14 @@ class RentCasesViewController: UIViewController, UITableViewDataSource, UITableV
     alert.addAction(alertAct)
     
     self.present(alert, animated: true, completion: nil)
+  }
+  
+  // MARK: - prepare for segue to SingleHouseVC
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    var destination = segue.destination as? SingleHouseViewController
+    
+    destination?.post = displayPost[selectedCellIndexPath]
+    print(destination?.post)
   }
 }
 
