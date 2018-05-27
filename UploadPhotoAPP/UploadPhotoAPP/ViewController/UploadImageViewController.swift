@@ -7,7 +7,7 @@
 import UIKit
 import Firebase
 
-class UploadImageViewController: UIViewController {
+class UploadImageViewController: UIViewController, UITextFieldDelegate {
   
   @IBOutlet weak var mainImageIvew: UIImageView!
   @IBOutlet weak var pickImageBtn: UIButton!
@@ -31,6 +31,10 @@ class UploadImageViewController: UIViewController {
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
+  }
+  
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    self.view.endEditing(true)
   }
   
   @IBAction func pickImage(_ sender: Any) {
