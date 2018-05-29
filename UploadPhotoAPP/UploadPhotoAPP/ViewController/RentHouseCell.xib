@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,27 +37,25 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="近捷運大安站" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="am5-6y-eoA">
-                        <rect key="frame" x="88" y="40.5" width="248.5" height="40"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="am5-6y-eoA" secondAttribute="height" multiplier="51:8" id="DSv-s1-0v3"/>
-                        </constraints>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="近捷運大安站" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="am5-6y-eoA">
+                        <rect key="frame" x="88" y="40.5" width="225" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="am5-6y-eoA" firstAttribute="top" secondItem="OZZ-Mf-OpG" secondAttribute="bottom" constant="5" id="Ddx-q1-mst"/>
+                    <constraint firstItem="am5-6y-eoA" firstAttribute="top" secondItem="OZZ-Mf-OpG" secondAttribute="bottom" constant="8" id="6DQ-b5-idq"/>
+                    <constraint firstItem="am5-6y-eoA" firstAttribute="leading" secondItem="4eS-kT-a1F" secondAttribute="trailing" constant="8" id="8ca-md-FaH"/>
                     <constraint firstAttribute="bottom" secondItem="4eS-kT-a1F" secondAttribute="bottom" id="NbA-nC-Csa"/>
-                    <constraint firstItem="am5-6y-eoA" firstAttribute="leading" secondItem="4eS-kT-a1F" secondAttribute="trailing" constant="8" id="Nrf-eN-GWR"/>
                     <constraint firstItem="OZZ-Mf-OpG" firstAttribute="leading" secondItem="4eS-kT-a1F" secondAttribute="trailing" constant="8" id="RRu-lR-RSB"/>
+                    <constraint firstItem="am5-6y-eoA" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.6" id="XNL-zZ-0fv"/>
                     <constraint firstAttribute="trailing" secondItem="4eS-kT-a1F" secondAttribute="trailing" constant="295" id="bBr-1n-biw"/>
                     <constraint firstItem="OZZ-Mf-OpG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="hxK-HS-I1a"/>
-                    <constraint firstItem="am5-6y-eoA" firstAttribute="top" secondItem="OZZ-Mf-OpG" secondAttribute="bottom" constant="8" id="iO7-ZH-wTO"/>
                     <constraint firstItem="4eS-kT-a1F" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="iVf-HK-Bm9"/>
                     <constraint firstItem="4eS-kT-a1F" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="kvL-V1-xki"/>
                     <constraint firstItem="4eS-kT-a1F" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="sW7-nN-FO0"/>
+                    <constraint firstItem="am5-6y-eoA" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.3" id="yq6-uN-8dz"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

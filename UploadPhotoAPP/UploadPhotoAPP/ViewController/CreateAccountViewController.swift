@@ -34,7 +34,6 @@ class CreateAccountViewController: UIViewController {
       goToUploadBtn.isEnabled = false
       return
     } else {
-      
     }
   }
 
@@ -80,7 +79,9 @@ class CreateAccountViewController: UIViewController {
           return
         }
         guard let uid = user?.uid else { return }
+        
         let userdefaults = UserDefaults.standard
+        userdefaults.set(name, forKey: "displayName")
         let ref = Database.database().reference(fromURL: "https://uploadphoto-7af69.firebaseio.com/")
         // this will add child user under the hierachy of "user" by auto generated uid
         let userRef = ref.child("user").child(uid)
@@ -93,12 +94,13 @@ class CreateAccountViewController: UIViewController {
             print("Successfully saved user into Firebase DB")
          
           // save current user name into userdefaults
-          userdefaults.set(name, forKey: "currentDisplayName")
+          self.goToUploadBtn.isEnabled = true
             let alert = UIAlertController(title: "Rock", message: "Successed! Your account has been created", preferredStyle: .alert)
             let alertMsg = UIAlertAction(title: "Perfect", style: .cancel, handler: nil)
             alert.addAction(alertMsg)
-            self.present(alert, animated: true, completion: nil)
-          self.goToUploadBtn.isEnabled = true
+          self.present(alert, animated: true, completion: {
+            self.dismiss(animated: true, completion: nil)
+          })
         })
       }
     }
@@ -106,7 +108,14 @@ class CreateAccountViewController: UIViewController {
   
   @IBAction func logIn(_ sender: UIButton) {
     //self.dismiss(animated: true, completion: nil)
-    self.performSegue(withIdentifier: "goToLogIn", sender: self)
+    //self.performSegue(withIdentifier: "goToLogIn", sender: self)
+  }
+  
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    enterPsdTextFd.resignFirstResponder()
+    enterEmailTextFd.resignFirstResponder()
+    enterUserNameTextFd.resignFirstResponder()
+    confirmPsdTextFd.resignFirstResponder()
   }
   
 }

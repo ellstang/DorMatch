@@ -16,7 +16,7 @@ class UploadFinishPageViewController: UIViewController {
   @IBOutlet weak var houseDescriptionTextFd: UITextView!
   @IBOutlet weak var uploadBtn: UIButton!
 
-  
+  let userdefault = UserDefaults.standard
   let pickerVC = UIImagePickerController()
   let storage: StorageReference! = Storage.storage().reference().child("PostImages")
   let database: DatabaseReference! = Database.database().reference(fromURL: "https://uploadphoto-7af69.firebaseio.com/Posts")
@@ -48,6 +48,13 @@ class UploadFinishPageViewController: UIViewController {
     
   }
   
+  // MARK: - Hide textfield when end editing
+  
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    mainTitleTextFd.resignFirstResponder()
+    subPostUserInfoTextFd.resignFirstResponder()
+    houseDescriptionTextFd.resignFirstResponder()
+  }
 }
 
 
@@ -60,7 +67,7 @@ extension UploadFinishPageViewController {
       postsStorageArray["posterDescription"] = subPostUserInfoTextFd.text as AnyObject
       postsStorageArray["imageLongDescription"] = houseDescriptionTextFd.text as AnyObject
       postsStorageArray["imageURL"] = delegate?.fetchImageUrl() as AnyObject
-      postsStorageArray["posterUserName"] = Auth.auth().currentUser?.displayName as AnyObject
+      postsStorageArray["posterUserName"] = userdefault.value(forKey: "displayName") as AnyObject
       postsStorageArray["postUserID"] = Auth.auth().currentUser?.uid as AnyObject
       
       // create an instance of class "Post_ForTableView"

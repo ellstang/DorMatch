@@ -32,6 +32,8 @@ class LogInViewController: UIViewController {
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }
+  
+  // MARK: - prepare for segue
   func prepare(for segue: UIStoryboardSegue, sender: Any?) -> RentCasesViewController? {
      let destination = segue.destination as! RentCasesViewController
     let rentCaseVC = destination
@@ -45,6 +47,8 @@ class LogInViewController: UIViewController {
     Auth.auth().signIn(withEmail: emailTextFd.text!, password: psdTextFd.text!) { (user, error) in
       if error != nil {
         print(error)
+        let errAlert = self.popAlert(title: "ohoh", msg: "error occured", msgAct: "please check your spelling")
+        self.present(errAlert, animated: true, completion: nil)
         return
       } else {
         let alert = UIAlertController(title: "Successfully logged in!", message: "You are now logged in", preferredStyle: .alert)
@@ -58,5 +62,18 @@ class LogInViewController: UIViewController {
 //        })
       }
     }
+  }
+  
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    psdTextFd.resignFirstResponder()
+    emailTextFd.resignFirstResponder()
+  }
+  
+  
+  func popAlert(title: String?, msg: String?, msgAct: String) -> UIAlertController {
+    let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+    let act = UIAlertAction(title: msgAct, style: .default, handler: nil)
+    alert.addAction(act)
+    return alert
   }
 }

@@ -85,7 +85,6 @@ extension UploadImageViewController: UIImagePickerControllerDelegate, UINavigati
           print("upload image error is \(error!)")
           return
         } else {
-          print(metadata)
           self.storage.child(self.nameForImageTextFd.text!).downloadURL(completion: { (url, err) in
             if err != nil {
               
@@ -115,7 +114,8 @@ extension UploadImageViewController: UIImagePickerControllerDelegate, UINavigati
   }
   
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    self.view.resignFirstResponder()
+    nameForImageTextFd.resignFirstResponder()
+    
   }
 }
 

@@ -8,21 +8,24 @@ import UIKit
 import Firebase
 
 class SingleHouseViewController: UIViewController {
-  
-
-  var post = Post_ForTableView()
+    var post = Post_ForTableView()
   
   @IBOutlet weak var mainImage: UIImageView!
   @IBOutlet weak var postTitleLabel: UILabel!
   @IBOutlet weak var postDate: UILabel!
   @IBOutlet weak var longDescription: UILabel!
+  @IBOutlet weak var goToChatVCBtn: UIButton!
+  let userdefaults = UserDefaults.standard
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    let posterName = userdefaults.value(forKey: "displayName")
     let imageURL = URL(string: post.imageURL!)
     postTitleLabel.text = post.postTitle!
     longDescription.text = post.imageLongDescription
-
+    
+    goToChatVCBtn.setTitle("\(posterName!)", for: .normal)
+    
     URLSession.shared.dataTask(with: imageURL!) { (data, response, error) in
       if error != nil {
         print("download image task error \(error)")
@@ -32,7 +35,6 @@ class SingleHouseViewController: UIViewController {
         }
       }
     }.resume()
-
   }
   
   override func didReceiveMemoryWarning() {
