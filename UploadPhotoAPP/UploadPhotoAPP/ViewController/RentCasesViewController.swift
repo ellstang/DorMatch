@@ -151,12 +151,14 @@ class RentCasesViewController: UIViewController, UITableViewDataSource, UITableV
       let thisPosterDescription = PostDict["posterDescription"]
       let thisPostTitle = PostDict["postTitle"]
       let thisPostImageLongDescription = PostDict["imageLongDescription"]
+      let thisPosterUserName = PostDict["posterUserName"]
       //create instance of class "Post_ForTableView" to store this snapshot and for append it to our displayPost array later
       let downloadedPost = Post_ForTableView()
       downloadedPost.imageURL = thisImageURL as! String
       downloadedPost.postTitle = thisPostTitle as! String
       downloadedPost.posterDescription = thisPosterDescription as! String
       downloadedPost.imageLongDescription = thisPostImageLongDescription as! String
+      downloadedPost.postUserName = thisPosterUserName as! String
 
       displayPost.append(downloadedPost)
       self.rentCasesTableView.reloadData()

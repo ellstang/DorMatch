@@ -1,10 +1,8 @@
-//
 //  LogInViewController.swift
 //  UploadPhotoAPP
 //
 //  Created by 唐嘉伶 on 05/04/2018.
 //  Copyright © 2018 唐嘉伶. All rights reserved.
-//
 
 import UIKit
 import Firebase
@@ -15,19 +13,16 @@ class LogInViewController: UIViewController {
   @IBOutlet weak var emailTextFd: UITextField!
   @IBOutlet weak var psdTextFd: UITextField!
   @IBOutlet weak var logInBtn: UIButton!
-  //var rentCaseVC = RentCasesViewController()
-  
   
   override func viewDidLoad() {
     super.viewDidLoad()
   }
 
-  func checkIfLoggedIn() {
-    if (Auth.auth().currentUser?.isEmailVerified)! {
-      self.navigationController?.popToRootViewController(animated: true)
-
-    }
-  }
+//  func checkIfLoggedIn() {
+//    if (Auth.auth().currentUser?.isEmailVerified)! {
+//      self.navigationController?.popToRootViewController(animated: true)
+//    }
+//  }
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
@@ -46,20 +41,18 @@ class LogInViewController: UIViewController {
     
     Auth.auth().signIn(withEmail: emailTextFd.text!, password: psdTextFd.text!) { (user, error) in
       if error != nil {
-        print(error)
-        let errAlert = self.popAlert(title: "ohoh", msg: "error occured", msgAct: "please check your spelling")
+        let errMsg = error?.localizedDescription
+        let errAlert = self.popAlert(title: "ohoh", msg: errMsg, msgAct: "please check your spelling")
         self.present(errAlert, animated: true, completion: nil)
         return
       } else {
         let alert = UIAlertController(title: "Successfully logged in!", message: "You are now logged in", preferredStyle: .alert)
-        let alertMsg = UIAlertAction(title: "Perfect", style: .cancel, handler: nil)
+        let alertMsg = UIAlertAction(title: "Perfect", style: .cancel, handler: { (Void) in
+          let storyboard = UIStoryboard(name: "Main", bundle: nil)
+          let RentCasesVC = storyboard.instantiateViewController(withIdentifier: "RentCasesVC")
+          self.present(RentCasesVC, animated: true, completion: nil)
+        })
         alert.addAction(alertMsg)
-        self.present(alert, animated: true, completion: nil)
-        self.dismiss(animated: true, completion: nil)
-//        self.present(alert, animated: true, completion: {
-//
-          //self.present(self.rentCaseVC, animated: true, completion: nil)
-//        })
       }
     }
   }

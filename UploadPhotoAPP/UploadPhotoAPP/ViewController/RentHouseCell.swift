@@ -19,6 +19,8 @@ class RentHouseCell: UITableViewCell {
     super.awakeFromNib()
     houseImage.clipsToBounds = true
     houseImage.contentMode = .scaleAspectFit
+    locationMainTitle.lineBreakMode = .byTruncatingHead
+    posterDescriptionSubTitle.lineBreakMode = .byTruncatingHead
   }
   
   override func setSelected(_ selected: Bool, animated: Bool) {

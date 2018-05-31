@@ -19,13 +19,11 @@ class SingleHouseViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    let posterName = userdefaults.value(forKey: "displayName")
+    //adjuest font size of post title:
+    postTitleLabel.adjustsFontSizeToFitWidth = true
     let imageURL = URL(string: post.imageURL!)
     postTitleLabel.text = post.postTitle!
-    longDescription.text = post.imageLongDescription
-    
-    goToChatVCBtn.setTitle("\(posterName!)", for: .normal)
-    
+    goToChatVCBtn.setTitle("\(post.postUserName)", for: .normal)
     URLSession.shared.dataTask(with: imageURL!) { (data, response, error) in
       if error != nil {
         print("download image task error \(error)")
@@ -35,6 +33,10 @@ class SingleHouseViewController: UIViewController {
         }
       }
     }.resume()
+    
+    guard let postUserName = post.postUserName else { return }
+    goToChatVCBtn.setTitle("\(postUserName)", for: .normal)
+
   }
   
   override func didReceiveMemoryWarning() {

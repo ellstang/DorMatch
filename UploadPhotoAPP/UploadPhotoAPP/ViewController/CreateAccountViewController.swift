@@ -75,7 +75,10 @@ class CreateAccountViewController: UIViewController {
       
       Auth.auth().createUser(withEmail: enterEmailTextFd.text!, password: enterPsdTextFd.text!) { (user, error) in
         if error != nil {
-          print(error)
+          var errMsg = ""
+          errMsg = (error?.localizedDescription)!
+          let errAlert = self.popAlert(title: "Error Occured", msg: errMsg, msgAct: "alright")
+          self.present(errAlert, animated: true, completion: nil)
           return
         }
         guard let uid = user?.uid else { return }
@@ -87,28 +90,27 @@ class CreateAccountViewController: UIViewController {
         let userRef = ref.child("user").child(uid)
         let values = ["name": name, "email": email]
         userRef.updateChildValues(values, withCompletionBlock: { (err, ref) in
-            if err != nil {
-              print(err)
+          if err != nil {
               return
             }
             print("Successfully saved user into Firebase DB")
-         
           // save current user name into userdefaults
           self.goToUploadBtn.isEnabled = true
             let alert = UIAlertController(title: "Rock", message: "Successed! Your account has been created", preferredStyle: .alert)
-            let alertMsg = UIAlertAction(title: "Perfect", style: .cancel, handler: nil)
-            alert.addAction(alertMsg)
-          self.present(alert, animated: true, completion: {
-            self.dismiss(animated: true, completion: nil)
+//            let alertMsg = UIAlertAction(title: "Perfect", style: .cancel, handler: nil)
+          let alertMsg = UIAlertAction(title: "Perfect", style: .default, handler: { (Void) in
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let rentCasesVC = storyboard.instantiateViewController(withIdentifier: "RentCasesVC")
+            self.present(rentCasesVC, animated: true, completion: nil)
           })
+            alert.addAction(alertMsg)
+          self.present(alert, animated: true, completion: nil)
         })
       }
     }
   }
   
   @IBAction func logIn(_ sender: UIButton) {
-    //self.dismiss(animated: true, completion: nil)
-    //self.performSegue(withIdentifier: "goToLogIn", sender: self)
   }
   
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -116,6 +118,14 @@ class CreateAccountViewController: UIViewController {
     enterEmailTextFd.resignFirstResponder()
     enterUserNameTextFd.resignFirstResponder()
     confirmPsdTextFd.resignFirstResponder()
+  }
+  
+  // MARK: - create alertVC method:
+  func popAlert(title: String?, msg: String?, msgAct: String) -> UIAlertController {
+    let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+    let act = UIAlertAction(title: msgAct, style: .default, handler: nil)
+    alert.addAction(act)
+    return alert
   }
   
 }

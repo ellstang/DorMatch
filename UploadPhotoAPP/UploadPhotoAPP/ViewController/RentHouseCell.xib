@@ -8,7 +8,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,33 +28,30 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="近捷運大安站" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZZ-Mf-OpG">
-                        <rect key="frame" x="88" y="11" width="172" height="21.5"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="OZZ-Mf-OpG" secondAttribute="height" multiplier="8:1" id="ezU-tj-Vpl"/>
-                        </constraints>
+                        <rect key="frame" x="88" y="16" width="275" height="22"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="近捷運大安站" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="am5-6y-eoA">
-                        <rect key="frame" x="88" y="40.5" width="225" height="24"/>
+                        <rect key="frame" x="88" y="41" width="275" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="am5-6y-eoA" firstAttribute="top" secondItem="OZZ-Mf-OpG" secondAttribute="bottom" constant="8" id="6DQ-b5-idq"/>
-                    <constraint firstItem="am5-6y-eoA" firstAttribute="leading" secondItem="4eS-kT-a1F" secondAttribute="trailing" constant="8" id="8ca-md-FaH"/>
+                    <constraint firstItem="OZZ-Mf-OpG" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="4" id="I4k-Or-Z6R"/>
+                    <constraint firstItem="am5-6y-eoA" firstAttribute="leading" secondItem="4eS-kT-a1F" secondAttribute="trailing" constant="8" id="NN8-6h-Vim"/>
                     <constraint firstAttribute="bottom" secondItem="4eS-kT-a1F" secondAttribute="bottom" id="NbA-nC-Csa"/>
-                    <constraint firstItem="OZZ-Mf-OpG" firstAttribute="leading" secondItem="4eS-kT-a1F" secondAttribute="trailing" constant="8" id="RRu-lR-RSB"/>
-                    <constraint firstItem="am5-6y-eoA" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.6" id="XNL-zZ-0fv"/>
                     <constraint firstAttribute="trailing" secondItem="4eS-kT-a1F" secondAttribute="trailing" constant="295" id="bBr-1n-biw"/>
-                    <constraint firstItem="OZZ-Mf-OpG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="hxK-HS-I1a"/>
                     <constraint firstItem="4eS-kT-a1F" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="iVf-HK-Bm9"/>
                     <constraint firstItem="4eS-kT-a1F" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="kvL-V1-xki"/>
+                    <constraint firstItem="am5-6y-eoA" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="4" id="mwt-G2-k4Y"/>
+                    <constraint firstItem="OZZ-Mf-OpG" firstAttribute="leading" secondItem="4eS-kT-a1F" secondAttribute="trailing" constant="8" id="n68-Ew-OIm"/>
                     <constraint firstItem="4eS-kT-a1F" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="sW7-nN-FO0"/>
-                    <constraint firstItem="am5-6y-eoA" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.3" id="yq6-uN-8dz"/>
+                    <constraint firstItem="am5-6y-eoA" firstAttribute="top" secondItem="OZZ-Mf-OpG" secondAttribute="bottom" constant="3" id="wEt-qD-Cy1"/>
+                    <constraint firstItem="OZZ-Mf-OpG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="wpp-yc-CkB"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
