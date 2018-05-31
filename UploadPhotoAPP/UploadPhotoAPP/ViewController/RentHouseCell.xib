@@ -7,51 +7,52 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="KGk-i7-Jjw" customClass="RentHouseCell" customModule="UploadPhotoAPP" customModuleProvider="target">
+        <tableViewCell contentMode="scaleAspectFit" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="Cell" id="KGk-i7-Jjw" customClass="RentHouseCell" customModule="UploadPhotoAPP" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4eS-kT-a1F">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4eS-kT-a1F">
                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="4eS-kT-a1F" secondAttribute="height" multiplier="1:1" id="zhk-8E-nUB"/>
+                            <constraint firstAttribute="width" secondItem="4eS-kT-a1F" secondAttribute="height" multiplier="20:20" id="kY1-Sb-QQU"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="近捷運大安站" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZZ-Mf-OpG">
-                        <rect key="frame" x="88" y="16" width="275" height="22"/>
+                        <rect key="frame" x="88" y="3" width="275" height="32"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="近捷運大安站" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="am5-6y-eoA">
-                        <rect key="frame" x="88" y="41" width="275" height="17"/>
+                        <rect key="frame" x="88" y="39" width="275" height="32"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="OZZ-Mf-OpG" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="4" id="I4k-Or-Z6R"/>
-                    <constraint firstItem="am5-6y-eoA" firstAttribute="leading" secondItem="4eS-kT-a1F" secondAttribute="trailing" constant="8" id="NN8-6h-Vim"/>
-                    <constraint firstAttribute="bottom" secondItem="4eS-kT-a1F" secondAttribute="bottom" id="NbA-nC-Csa"/>
-                    <constraint firstAttribute="trailing" secondItem="4eS-kT-a1F" secondAttribute="trailing" constant="295" id="bBr-1n-biw"/>
-                    <constraint firstItem="4eS-kT-a1F" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="iVf-HK-Bm9"/>
-                    <constraint firstItem="4eS-kT-a1F" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="kvL-V1-xki"/>
-                    <constraint firstItem="am5-6y-eoA" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="4" id="mwt-G2-k4Y"/>
-                    <constraint firstItem="OZZ-Mf-OpG" firstAttribute="leading" secondItem="4eS-kT-a1F" secondAttribute="trailing" constant="8" id="n68-Ew-OIm"/>
-                    <constraint firstItem="4eS-kT-a1F" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="sW7-nN-FO0"/>
-                    <constraint firstItem="am5-6y-eoA" firstAttribute="top" secondItem="OZZ-Mf-OpG" secondAttribute="bottom" constant="3" id="wEt-qD-Cy1"/>
-                    <constraint firstItem="OZZ-Mf-OpG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="wpp-yc-CkB"/>
+                    <constraint firstItem="4eS-kT-a1F" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="1a2-2S-NbI"/>
+                    <constraint firstItem="am5-6y-eoA" firstAttribute="leading" secondItem="4eS-kT-a1F" secondAttribute="trailing" constant="8" id="CWK-6P-i0Z"/>
+                    <constraint firstAttribute="trailing" secondItem="OZZ-Mf-OpG" secondAttribute="trailing" constant="12" id="DK8-ZI-SVW"/>
+                    <constraint firstItem="4eS-kT-a1F" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="HlZ-il-8x9"/>
+                    <constraint firstItem="OZZ-Mf-OpG" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.4" id="Z8p-Oj-ung"/>
+                    <constraint firstAttribute="bottom" secondItem="4eS-kT-a1F" secondAttribute="bottom" id="c4Q-h9-lR1"/>
+                    <constraint firstItem="am5-6y-eoA" firstAttribute="top" secondItem="OZZ-Mf-OpG" secondAttribute="bottom" constant="4" id="igp-72-f18"/>
+                    <constraint firstItem="4eS-kT-a1F" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="izb-Ih-dQJ"/>
+                    <constraint firstAttribute="trailing" secondItem="am5-6y-eoA" secondAttribute="trailing" constant="12" id="mVK-8D-Rnr"/>
+                    <constraint firstItem="OZZ-Mf-OpG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="qsQ-BJ-0TP"/>
+                    <constraint firstItem="OZZ-Mf-OpG" firstAttribute="leading" secondItem="4eS-kT-a1F" secondAttribute="trailing" constant="8" id="skw-6Y-fGz"/>
+                    <constraint firstItem="am5-6y-eoA" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.4" id="tMF-Ga-cgk"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
