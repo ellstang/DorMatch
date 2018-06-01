@@ -37,7 +37,6 @@ class LogInViewController: UIViewController {
   
     
   @IBAction func logIn(_ sender: UIButton) {
-    let databaseRef = Database.database().reference(fromURL: "https://uploadphoto-7af69.firebaseio.com/")
     
     Auth.auth().signIn(withEmail: emailTextFd.text!, password: psdTextFd.text!) { (user, error) in
       if error != nil {
@@ -53,6 +52,7 @@ class LogInViewController: UIViewController {
           self.present(RentCasesVC, animated: true, completion: nil)
         })
         alert.addAction(alertMsg)
+        self.present(alert, animated: true, completion: nil)
       }
     }
   }

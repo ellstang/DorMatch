@@ -18,6 +18,7 @@ class RentCasesViewController: UIViewController, UITableViewDataSource, UITableV
   @IBOutlet weak var rentCasesTableView: UITableView!
   @IBOutlet weak var postBtn: UIBarButtonItem!
   @IBAction func Post(_ sender: UIBarButtonItem) {
+    checkIfLoggedIn()
     self.performSegue(withIdentifier: "goToUploadImageVC", sender: nil)
   }
   
@@ -38,6 +39,7 @@ class RentCasesViewController: UIViewController, UITableViewDataSource, UITableV
     rentCasesTableView.register(nib, forCellReuseIdentifier: "Cell")
     
     checkIfLoggedIn()
+    
     //fetchExistingUser()
     if displayPost.count == 0 {
       fetchAllExistingPostsFromDB()
@@ -54,7 +56,6 @@ class RentCasesViewController: UIViewController, UITableViewDataSource, UITableV
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    checkIfLoggedIn()
   }
   
   @IBAction func logOut(_ sender: UIButton) {
@@ -112,6 +113,10 @@ class RentCasesViewController: UIViewController, UITableViewDataSource, UITableV
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return displayPost.count
+  }
+  
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 80
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
