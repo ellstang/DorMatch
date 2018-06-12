@@ -47,9 +47,10 @@ class LogInViewController: UIViewController {
       } else {
         let alert = UIAlertController(title: "Successfully logged in!", message: "You are now logged in", preferredStyle: .alert)
         let alertMsg = UIAlertAction(title: "Perfect", style: .cancel, handler: { (Void) in
-          let storyboard = UIStoryboard(name: "Main", bundle: nil)
-          let RentCasesVC = storyboard.instantiateViewController(withIdentifier: "RentCasesVC")
-          self.present(RentCasesVC, animated: true, completion: nil)
+          self.navigationController?.popToRootViewController(animated: true)
+//          let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//          let RentCasesVC = storyboard.instantiateViewController(withIdentifier: "RentCasesVC")
+//          self.present(RentCasesVC, animated: true, completion: nil)
         })
         alert.addAction(alertMsg)
         self.present(alert, animated: true, completion: nil)

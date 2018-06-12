@@ -99,9 +99,10 @@ class CreateAccountViewController: UIViewController {
             let alert = UIAlertController(title: "Rock", message: "Successed! Your account has been created", preferredStyle: .alert)
 //            let alertMsg = UIAlertAction(title: "Perfect", style: .cancel, handler: nil)
           let alertMsg = UIAlertAction(title: "Perfect", style: .default, handler: { (Void) in
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let rentCasesVC = storyboard.instantiateViewController(withIdentifier: "RentCasesVC")
-            self.present(rentCasesVC, animated: true, completion: nil)
+            self.navigationController?.popToRootViewController(animated: true)
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let rentCasesVC = storyboard.instantiateViewController(withIdentifier: "RentCasesVC")
+//            self.present(rentCasesVC, animated: true, completion: nil)
           })
             alert.addAction(alertMsg)
           self.present(alert, animated: true, completion: nil)

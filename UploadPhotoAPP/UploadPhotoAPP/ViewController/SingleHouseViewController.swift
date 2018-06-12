@@ -23,7 +23,12 @@ class SingleHouseViewController: UIViewController {
     postTitleLabel.adjustsFontSizeToFitWidth = true
     let imageURL = URL(string: post.imageURL!)
     postTitleLabel.text = post.postTitle!
-    goToChatVCBtn.setTitle("\(post.postUserName)", for: .normal)
+    longDescription.text = post.imageLongDescription
+    if let postUserName = post.postUserName , postUserName != "" {
+    print("postUserName is \(postUserName)")
+    goToChatVCBtn.setTitle("\(postUserName)", for: .normal)
+    }
+    
     URLSession.shared.dataTask(with: imageURL!) { (data, response, error) in
       if error != nil {
         print("download image task error \(error)")
@@ -34,8 +39,7 @@ class SingleHouseViewController: UIViewController {
       }
     }.resume()
     
-    guard let postUserName = post.postUserName else { return }
-    goToChatVCBtn.setTitle("\(postUserName)", for: .normal)
+//    longDescription.textRect(forBounds: CGRect(x: 10, y: 10, width: 350, height: 180), limitedToNumberOfLines: 1)
 
   }
   

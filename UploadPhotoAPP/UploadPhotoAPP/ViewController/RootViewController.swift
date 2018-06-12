@@ -8,8 +8,12 @@ import UIKit
 
 class RootViewController: UIViewController {
 
+  @IBOutlet weak var subTitleLabel: UILabel!
+  @IBOutlet weak var mainTitleLabel: UILabel!
   override func viewDidLoad() {
     super.viewDidLoad()
+    mainTitleLabel.adjustsFontSizeToFitWidth = true
+    subTitleLabel.adjustsFontSizeToFitWidth = true
   }
   
   override func didReceiveMemoryWarning() {

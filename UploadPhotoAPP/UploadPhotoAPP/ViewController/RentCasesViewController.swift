@@ -163,7 +163,7 @@ class RentCasesViewController: UIViewController, UITableViewDataSource, UITableV
       downloadedPost.postTitle = thisPostTitle as! String
       downloadedPost.posterDescription = thisPosterDescription as! String
       downloadedPost.imageLongDescription = thisPostImageLongDescription as! String
-      downloadedPost.postUserName = thisPosterUserName as! String
+     //downloadedPost.postUserName = thisPosterUserName as! String
 
       displayPost.append(downloadedPost)
       self.rentCasesTableView.reloadData()
